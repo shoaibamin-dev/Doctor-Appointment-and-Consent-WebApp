@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    </link>
+
+</head>
+
+<body>
+
+
+    <!-- LOGIN FORM -->
+    <div id="N6s45nqg5mKU6vIcDwNvzCizUL9B1lc6" class="admin-signin-panel">
+
+        <div class="navigation">
+            <ul>
+                <li><img height="60" src="https://i.postimg.cc/q42Syqqb/thumbnail.png?dl=1" /></li>
+
+                <li class="main-heading">
+                    <h2>HCP Consent Management Console</h>
+                </li>
+
+                <li>
+
+
+
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="input-form">
+
+            <img src="imgs/left.PNG" height="300" width="350" />
+
+            <form class="form-signin" onsubmit="userSubmit(); return false;">
+
+
+                <img class="logo-img" src="thumbnail.PNG" />
+                <h1 class="h3 mb-3  align-center"><b>LOGIN FORM</b></h1>
+
+                <br>
+                <button class="btn btn-lg btn-success btn-block w-100 mx-auto" type="submit">Sign In With
+                    Google</button>
+            </form>
+            <img src="imgs/right.PNG" height="300" width="350" />
+        </div>
+
+
+
+    </div>
+
+
+    <!-- ADD HCP HISTORY -->
+    <div id="N6s45nqg5mKU6vIcDwNvzCizUL9B1ld6" class="hide admin-signin-panel">
+
+        <div class="navigation">
+            <ul>
+                <li><img height="60" src="https://i.postimg.cc/q42Syqqb/thumbnail.png?dl=1" /></li>
+
+                <li class="main-heading">
+                    <h2>HCP Consent Management Console</h>
+                </li>
+
+                <li>
+
+
+                    <img height="75"
+                        src="https://freepngimg.com/thumb/microsoft/28350-5-microsoft-logo-photos-thumb.png" />
+                    &nbsp;
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    &nbsp;&nbsp;
+                    <span class="google-name" id="google-name">Emilio Seplulveda</span>
+                    &nbsp;
+                    <span onclick="logout()" class="btn-signout">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </span>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+        <button class="btn btn-primary btn-back" onclick="goBack()">Back</button>
+
+
+        <div class="input-form">
+
+            <img src="imgs/left.PNG" height="250" width="300" />
+
+
+            <form class="form-signin w-50" onsubmit="recordSubmit(); return false;">
+
+                <img class="logo-img" src="thumbnail.PNG" />
+                <h1 class="h3 mb-3  align-center"><b>ADD RECORD</b></h1>
+
+
+                <div class="form-group">
+                    <label for="Date">Date</label>
+                    <input type="date" class="form-control" id="record-date" placeholder="Date">
+                </div>
+
+                <div class="form-group">
+                    <label for="inputState">Status</label>
+                    <select class="form-control" name="status" id="record-status">
+                        <option value="No Status">No Status</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Rejected">Rejected</option>
+                        <option value="Pending Approval">Pending Approval</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="User ID">HCP Id</label>
+                    <input type="text" class="form-control" id="record-uid" placeholder="HCP Id">
+                </div>
+
+                <div class="form-group">
+                    <label for="Comments">Comments</label>
+                    <input type="text" class="form-control" id="record-comments" placeholder="Comments">
+                </div>
+
+                <div class="form-group">
+                    <label for="Attached Documents">Attached Documents</label>
+                    <input type="file" class="form-control-file" id="record-file">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+            </form>
+
+            <img src="imgs/right.PNG" height="250" width="300" />
+
+
+        </div>
+
+    </div>
+
+    <!-- ADD HCP NAME -->
+    <div id="N6s45nqg5mKU6vIcDwNvzCizUL9B1ld7" class="hide admin-signin-panel">
+
+        <div class="navigation">
+            <ul>
+                <li><img height="60" src="https://i.postimg.cc/q42Syqqb/thumbnail.png?dl=1" /></li>
+
+                <li class="main-heading">
+                    <h2>HCP Consent Management Console</h>
+                </li>
+
+                <li>
+
+
+                    <img height="75"
+                        src="https://freepngimg.com/thumb/microsoft/28350-5-microsoft-logo-photos-thumb.png" />
+                    &nbsp;
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    &nbsp;&nbsp;
+                    <span class="google-name" id="google-name">Emilio Seplulveda</span>
+                    &nbsp;
+                    <span onclick="logout()" class="btn-signout">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </span>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+        <button class="btn btn-primary btn-back" onclick="goBack()">Back</button>
+
+
+        <div class="input-form add-hcp-form">
+
+            <img src="imgs/left.PNG" height="250" width="300" />
+
+
+            <form class="form-signin w-50" onsubmit="recordHCP(); return false;">
+
+                <img class="logo-img" src="thumbnail.PNG" />
+                <h1 class="h3 mb-3  align-center"><b>ADD HCP</b></h1>
+
+
+                <div class="form-group">
+                    <label for="User Name">HCP Name</label>
+                    <input type="text" class="form-control" id="hcp-name" placeholder="Anna Maria">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="User ID">HCP Id</label>
+                    <input type="text" class="form-control" id="hcp-uid" placeholder="HCP Id">
+                </div>
+
+                <div class="form-group">
+                    <label for="User ID">Email</label>
+                    <input type="text" class="form-control" id="hcp-emaill" placeholder="annamaria@gmail.com">
+                </div>
+
+                <!-- <div class="form-group">
+                    <label for="Licence IDs">Licence IDs (Separated by comma)</label>
+                    <input type="text" class="form-control" id="hcp-licenceids" placeholder="3084141,3121234,...">
+                </div> -->
+
+                <div class="form-group">
+                    <label for="Self LIC">Self LIC</label>
+                    <input type="text" class="form-control" id="hcp-selflic" placeholder="3084141">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="HCP Status">HCP Status</label>
+                    <select name="status" id="hcp-status">
+                        <option value="No Status">No Status</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Rejected">Rejected</option>
+                        <option value="ending Approval">Pending Approval</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Date">Date</label>
+                    <input type="date" class="form-control" id="hcp-date" placeholder="Date">
+                </div>
+
+                <div class="form-group">
+                    <label for="User Phone">Phone</label>
+                    <input type="text" class="form-control" id="hcp-phonee" placeholder="+1-541-754-3010	">
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="Address Line 1">Address Line 1</label>
+                    <input type="text" class="form-control" id="hcp-address11" placeholder="Via Alessandro Manzoni 85">
+                </div>
+
+                <div class="form-group">
+                    <label for="Address Line 2">Address Line 2</label>
+                    <input type="text" class="form-control" id="hcp-address22" placeholder="Diabala district">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="City">City</label>
+                    <input type="text" class="form-control" id="hcp-city" placeholder="Pometo">
+                </div>
+
+                <div class="form-group">
+                    <label for="State-Province">State/Province</label>
+                    <input type="text" class="form-control" id="hcp-stateprovince" placeholder="Pavia">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="Postal Code">Postal Code</label>
+                    <input type="text" class="form-control" id="hcp-postalcode" placeholder="27040">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="Country">Country</label>
+                    <input type="text" class="form-control" id="hcp-country" placeholder="Italy">
+                </div>
+
+                <div class="form-group">
+                    <label for="Comments">Comments</label>
+                    <input type="text" class="form-control" id="hcp-comments" placeholder="This is a comment">
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+            </form>
+
+            <img src="imgs/right.PNG" height="250" width="300" />
+
+
+        </div>
+
+    </div>
+
+    <!-- HCP NAME AND HISTORY -->
+    <div id="N6s45nqg5mKU6vIcDwNvzCizUL9B1lc5" class="hide container-fluid hide">
+
+
+
+        <div class="navigation">
+            <ul>
+                <li><img height="60" src="https://i.postimg.cc/q42Syqqb/thumbnail.png?dl=1" /></li>
+
+                <li class="main-heading">
+                    <h2>HCP Consent Management Console</h>
+                </li>
+
+                <li>
+
+
+                    <img height="75"
+                        src="https://freepngimg.com/thumb/microsoft/28350-5-microsoft-logo-photos-thumb.png" />
+                    &nbsp;
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    &nbsp;&nbsp;
+                    <span class="google-name" id="google-name">Emilio Seplulveda</span>
+                    &nbsp;
+                    <span onclick="logout()" class="btn-signout">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </span>
+
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="cnt-main ">
+
+
+            <div class="center">
+
+                <h1 class="head">HCP Details</h1>
+
+                <div>
+                    <h4 class="background">
+                        HCP Information
+                    </h4>
+                    <table>
+
+                        <tr class="heading-row">
+                            <td><b>HCP Name:</b></td>
+                            <td><b>License #: </b></td>
+                            <td><b>General Consent Status:</b></td>
+
+                            <td><b>HCP Email:</b></td>
+                            <td><b>DATE</b></td>
+                            <td><b>User Name</b></td>
+                            <td><b>Phone #</b></td>
+                        </tr>
+
+                        <tr>
+
+                            <td class="hcp_name-container">
+                                <select data-id="select-hcp_name" name="status">
+                                </select>
+                            </td>
+
+                            <td><select data-id="select-hcp_lic" name="lic-list">
+                                </select></td>
+
+
+
+                            <td>
+                                <select disabled name="status" data-id="select-hcp_status">
+                                    <option value="No Status">No Status</option>
+                                    <option value="Approved">Approved</option>
+                                    <option value="Rejected">Rejected</option>
+                                    <option value="ending Approval">Pending Approval</option>
+                                </select>
+                            </td>
+
+
+                            <td id="hcp-email">lsdkfjdlj@ljl.com</td>
+
+
+                            <td id="last-date">May-10-2021</td>
+                            <td id="last-uid"> 038018</td>
+                            <td id="contact-phone">+9198023791</td>
+
+                        </tr>
+
+
+                        <tr class="heading-row">
+
+                            <td><b>Address Line 1</b></td>
+                            <td><b>Address Line 2</b></td>
+                            <td><b>City</b></td>
+                            <td><b>State/Province</b></td>
+                            <!-- <td><b>Province</b></td> -->
+                            <td><b>Postal Code:</b></td>
+                            <td><b>Country</b></td>
+                        </tr>
+
+                        <tr>
+
+
+
+
+
+                            <td id="address-line-1">Street 45 califonia</td>
+
+                            <td id="address-line-2">Street 49 califonia</td>
+
+                            <td id="city">Califonia</td>
+
+                            <td id="state">Michigan</td>
+
+                            <!-- <td id="province">Michigan</td> -->
+
+                            <td id="postal-code">459</td>
+
+
+                            <td id="country">United State</td>
+
+
+
+
+
+
+                        </tr>
+
+
+                        <tr class="heading-row">
+
+                            <td colspan="5"><b>Comments</b></td>
+                            <td><b></b></td>
+                            <td><b></b></td>
+
+                        </tr>
+
+                        <tr>
+
+
+
+                            <td colspan="5">
+                                <span id="comment"><i>This is my latest comment</i></span>
+                            </td>
+
+                            <td>
+                                <button onclick="addHCP()" class="button-view enhanced">Add HCP</button>
+                            </td>
+
+                            <td>
+                                <button onclick="addRecord()" class="button-view enhanced">Add Record</button>
+                            </td>
+
+                        </tr>
+
+
+                    </table>
+                </div>
+
+                <div class="cnt-bottom">
+                    <h4 class="background">
+                        HCP Consent History
+                    </h4>
+                    <!-- 
+                    <div class="cnt-search">
+                        <input type="text" placeholder="Search All Fields">
+                        <button class="button-view"> Search</button>
+                    </div> -->
+
+                    <table id="table-history">
+
+                        <thead>
+                            <tr class="background-light table-heading">
+                                <td>
+                                    <b>Date</b>
+
+                                </td>
+                                <td><b>Consent Status </b>
+
+                                </td>
+                                <td><b>Issued by</b>
+
+                                </td>
+
+                                <td><b>HCP Id</b>
+
+                                </td>
+
+                                <td><b>Record Id</b>
+
+                                </td>
+
+                                <td><b>Supporting Documentation</b>
+
+                                </td>
+                                <td><b>Comments</b>
+
+
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                    <!-- <div class="cnt-pagination">
+                        <span>(1 of 1)</span>
+                        &nbsp;
+                        &nbsp;&nbsp;
+    
+                        <button class="button-action">
+                            << </button>
+                                <button class="button-action">
+                                    < </button>
+    
+    
+                                        <button class="button-action dark">
+                                            1
+                                        </button>
+    
+                                        <button class="button-action">
+                                            >
+                                        </button>
+                                        <button class="button-action">
+                                            >>
+                                        </button>
+                    </div> -->
+
+                    <!-- <button class="button-view">Resolve Consent</button>
+                    <button class="button-view">Revoke Consent</button>
+                    <button class="button-view">Paper Consent</button>
+                    <button class="button-view">Add Activites</button>
+                    <button class="button-view">Delete Activites</button> -->
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+
+
+    <script src="config.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+
+
+
+</html>
